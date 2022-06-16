@@ -18,6 +18,15 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub sudarsana-reddy/github_maven_proj Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/sudarsana-reddy/github_maven_proj</url>
+    </repository>
+
+  </distributionManagement>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
