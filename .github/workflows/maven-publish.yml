@@ -28,6 +28,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
+      if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
       run: |
         cat settings.xml
         echo "GITHUB_TOKEN= ${{env.GITHUB_TOKEN}}"
