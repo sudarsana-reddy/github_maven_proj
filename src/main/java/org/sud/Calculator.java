@@ -19,8 +19,10 @@ public class Calculator
         Connection conn = null;
 
         try{
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/user", "root", "root");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/user", System.getProperty("username"),  System.getProperty("password"));
         }catch (Exception e){
+           System.out.println(e.getMessage());
+        }finally {
             conn.close();
         }
     }
