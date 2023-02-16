@@ -26,6 +26,10 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+    - name: print git commit hash
+      run: |
+        echo "GIT HASH=${{ env.GITHUB_SHA }}"
 
     - name: Publish to GitHub Packages Apache Maven
       if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
