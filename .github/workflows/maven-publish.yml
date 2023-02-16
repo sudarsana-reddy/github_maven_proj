@@ -29,7 +29,7 @@ jobs:
       
     - name: print git commit hash
       run: |
-        echo "GIT HASH=${{ GITHUB_SHA }}"
+        echo "GIT HASH=${GITHUB_SHA}"
 
     - name: Publish to GitHub Packages Apache Maven
       if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
